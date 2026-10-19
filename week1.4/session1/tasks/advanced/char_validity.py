@@ -7,7 +7,7 @@
 """
 
 
-def valid_char_in_string(popList, charSet):
+def valid_char_in_string(popList : list, charSet):
     """
     This function takes two arguments popList and charSet, in which popList
     is a list of strings and charSet is a list of strings with a length of 1
@@ -17,6 +17,17 @@ def valid_char_in_string(popList, charSet):
     characters not in charSet, or invalid charSet. Otherwise, returns
     a Boolean True. Examples of valid charSet are ['0', '1'], ['-', '*'].
     """
+
+    if (isinstance(charSet, list)): 
+        for string in popList:
+            for char in string:
+                if char in charSet: continue
+                else: return False
+
+        return True
+    else:
+        return False
+
 
 # test data
 

@@ -4,7 +4,7 @@
 # is to complete the function based on the details in the docstring.
 
 
-def isBond(intList):
+def isBond(intList: list):
     """
     This function accepts a list of integers and returns True if the
     sequence 0, 0, 7 appears in the list, in that order. Return False
@@ -16,7 +16,14 @@ def isBond(intList):
     # meaning you need to delete pass to write your code.
     # Nothing happens when pass is executed.
 
-    pass     # delete pass to write your code
+    try:
+        first_index = intList.index(0)
+        second_index = intList.index(0, first_index + 1)
+        third_index = intList.index(7, second_index + 1)
+
+        return True
+    except ValueError:
+        return False
 
 # Check if the following lines of code produce the correct output
 print(isBond([1, 2, 4, 0, 0, 7, 5]))   # True

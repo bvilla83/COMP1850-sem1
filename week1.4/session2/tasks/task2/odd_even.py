@@ -19,6 +19,14 @@ def odd_even(lstIntegers):
 
     # Complete your code here
 
+    odds_evens = [0, 0]
+
+    for integer in lstIntegers:
+        if (integer % 2 == 0): odds_evens[1] += 1
+        else: odds_evens[0] += 1
+
+    return odds_evens
+
 
 # Check if correct output is produced
 print(odd_even([1, 2, 3, 4, 5]))  # Output: [3, 2]

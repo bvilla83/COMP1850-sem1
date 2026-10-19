@@ -2,7 +2,6 @@
 
 # Inspect the code, run the program and observe the output
 
-
 def check_vote_eligibility(age):
     """
     Simple Voting Eligibility Checker
@@ -16,6 +15,6 @@ def check_vote_eligibility(age):
 
 
 age = int(input("Enter your age: "))
-check_vote_eligibility(age)
+check_vote_eligibility(age) 
 
-# what is the return value from check_vote_eligibility?
+# what is the return value from check_vote_eligibility? no return value

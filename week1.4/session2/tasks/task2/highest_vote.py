@@ -17,6 +17,29 @@ def most_frequent_string(votes):
         - None, None: if votes is empty.
     """
 
+    dictionary = {}
+
+    if (not votes):
+        return (None, None)
+
+    for vote in votes:
+        if not dictionary.get(vote):
+            dictionary[vote] = 1
+        else:
+            dictionary[vote] += 1
+
+
+
+    maximum = max(list(dictionary.values()))
+
+    largest_values = {k:v for (k, v) in dictionary.items() if v == maximum}
+    if len(largest_values.items()) > 1:
+        return (list(largest_values.keys()), maximum)
+    elif len(largest_values.items()) == 1:
+        return (list(largest_values.keys())[0], maximum)
+    else:
+        return (None, None)
+
     # Your task is to complete the body of the function based on the details in the docstring.
     # Hint 1: You can complete this task with for loops or comprehensions 
     # Hint 2: Think about the properties of the various collection-types

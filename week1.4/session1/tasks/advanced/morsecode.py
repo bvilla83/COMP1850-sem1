@@ -13,10 +13,12 @@
 """
 
 
-def string_to_morse_code(string):
+def string_to_morse_code(string : str):
     """
     Returns the Morse code of the string.
     """
+
+    morse_code_string = ""
 
     mcode = {'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.',
              'F': '..-.', 'G': '--.', 'H': '....', 'I': '..', 'J': '.---',
@@ -31,6 +33,10 @@ def string_to_morse_code(string):
              '.': '.-.-.-', '-': '-....-', '+': '.-.-.',  '"': '.-..-.',
              '?': '..--..', '/': '-..-.'}
 
+    for char in string.upper():
+        morse_code_string = morse_code_string + mcode[char] + " "
+
+    return morse_code_string.strip()
 
 # test data
 

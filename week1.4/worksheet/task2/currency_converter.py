@@ -6,10 +6,12 @@
     other than any provided template code, was written and developed by
     you independently.
 
-    Name:
+    Name: Blaire Villareal
 """
 
 def currency_converter(amount, from_currency, to_currency):
+
+    if amount < 0: return 0.0
 
     conversion_rate = {
         'GBP': {'CNY': 9.24, 'PHP': 75.00, 'INR': 109.06},
@@ -20,7 +22,9 @@ def currency_converter(amount, from_currency, to_currency):
 
     # your code here
 
-    return None
+    conversion = conversion_rate.get(from_currency).get(to_currency)
+
+    return round(amount * conversion, 2)
 
 # Submit only this file currency_converter.py with the completed function.
 

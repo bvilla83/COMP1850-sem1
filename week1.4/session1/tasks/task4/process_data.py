@@ -24,7 +24,7 @@ def process_data(data):
     return sum(data)
 
 # What is output from the following line of code?
-print(process_data([1, 2, 3, 4, 5]))  # 15?
-
+print(process_data([1, 2, 3, 4, 5]))  # 15? 
+ 
 # How about this one?
-print(process_data([]))               # None?
+print(process_data([]))               # None? 0
