@@ -4,7 +4,7 @@
 # your task is to complete the function based on the description
 
 
-def digits_sum(number):
+def digits_sum(number: int):
     """
     This recursive function calculates the sum of digits of a given positive
     integer. For example, sum of digits for 987 = 9 + 8 + 7 = 24.
@@ -18,8 +18,15 @@ def digits_sum(number):
         int: The sum of the digits of the input integer.
     """
     # complete your code here
-    # base case
 
+    string_number = str(number)
+
+    # base case
+    if len(string_number) == 0:
+        return 0
+    else:
+        return int(string_number[0]) + digits_sum(string_number[1:]) 
+        
     # recursive case
 
 
