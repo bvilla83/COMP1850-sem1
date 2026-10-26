@@ -29,10 +29,12 @@ def writePGM( filename, image ):
     width,height,max_gray,pixels = image  # unpack the tuple
 
     # open a file for writing
+    with open(filename, "w") as file:
+        for i in range(0, height + 1):
+            for j in range(0, width + 1):
+                pass
     # write the data in PGM format
     # don't forget the PGM code "P2"
-
-    return
 
 def invertPGM( image ):
     '''

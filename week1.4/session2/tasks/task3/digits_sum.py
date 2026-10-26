@@ -36,3 +36,11 @@ print(digits_sum(12345))  # Output: 15
 
 
 # Once completed, your next task is to write an equivalent function that uses loops.
+
+number = 987
+sum = 0
+
+for d in str(number):
+    sum += int(d)
+
+print(sum)
