@@ -43,7 +43,7 @@ class Person:
         """
         Returns True if Person's birthday is today, otherwise false
         """
-        if self.birth is date.today():
+        if self.birth == date.today():
             return True
         else:
             return False
