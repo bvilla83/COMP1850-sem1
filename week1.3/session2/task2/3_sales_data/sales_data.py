@@ -9,6 +9,34 @@
 #   - the widget which has been sold the most
 # and print these out in a nice, human-readable format
 
+# widget : count
+counts = {}
+largest_day = [0, 0, 0, 0, 0]
+average_amount = 0
+
+with open("sales.csv", "r") as sales:
+    next(sales)
+
+    i = 0
+    for line in sales:
+        i = i + 1
+        row = line.split(',')
+
+        average_amount = average_amount + int(row[2])
+
+        if counts.get(row[1]):
+            counts[row[1]] += 1
+        else:
+            counts[row[1]] = 1
+
+        if int(row[2]) > int(largest_day[2]):
+            largest_day = row
+
+    average_amount = average_amount / i;
+    print(f"Highest Selling Widget: {max(counts, key=counts.get)}")
+    print(f"Average Widget sold for: £{average_amount}")
+    print(f"Largest selling day: {largest_day[0]}")
+
 
 # additional: you can calculate other sales statistics such as:
 # - total sales for each region

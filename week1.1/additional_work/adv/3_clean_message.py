@@ -7,6 +7,11 @@
 
 raw_message = input("Type a message to tidy: ")
 
+new_msg = raw_message.strip().lower().replace(".", "-")
+
+print(f"Old Message: {raw_message}; count = {raw_message.count()}")
+print(f"New Message: {new_msg}; count = {new_msg.count()}")
+
 # TODO: apply a sequence of string methods to produce a cleaned_message
 # Example methods: strip, title, replace, lower, upper
 # TODO: display the original and cleaned messages

@@ -9,8 +9,7 @@ class MarkError(Exception):
 
     To be valid, a mark must be an integer in the range 0-100.
     """
-
-
+    
 def read_marks(filename):
     """
     Given the name of a CSV file, reads student names and exam marks from
@@ -47,9 +46,7 @@ def grade(mark):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        sys.exit("Usage: python grades.py <csv-filename>")
-
-    marks = read_marks(sys.argv[1])
+        marks = read_marks(sys.argv[1])
 
     for student, mark in marks.items():
         student_grade = grade(mark)

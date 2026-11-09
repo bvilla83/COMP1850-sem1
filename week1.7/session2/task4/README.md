@@ -1,4 +1,4 @@
-# Week 1.7, Session 2: Task 4
+p# Week 1.7, Session 2: Task 4
 
 `grades.py` is a Python program to process the exam marks in a CSV file,
 generating a final grade of 'Distinction', 'Pass' or 'Fail' for each

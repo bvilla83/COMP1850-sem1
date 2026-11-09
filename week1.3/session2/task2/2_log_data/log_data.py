@@ -4,13 +4,18 @@
 # (i.e., POST /login with the response 401) in a log file and print these out in a
 # human-readable format.
 
+with open("site.log", "r") as log:
+    for line in log:
+        categories = line.strip().split()
+
+        if categories[4] == "POST /login" and categories[5] == "401":
+            print(f"IP address {categories[2]} failed to login at {categories[1]} on {categories[0]}")
 
 # open and read the file
 
 # find all failed login attempts (POST /login with the response 401)
 # and print these out in a human-readable format:
 # IP address 192.168.1.17 failed to login at 10:42:12 on 2024-10-20
-
 
 # Hints:
 # - Remember to handle file errors

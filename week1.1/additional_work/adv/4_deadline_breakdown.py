@@ -5,7 +5,18 @@
 - Extension: handle negative input by printing a warning that the deadline has already passed.
 """
 
-minutes_remaining_input = input("Minutes remaining until the deadline: ")
+minutes_remaining_input = int(input("Minutes remaining until the deadline: "))
+
+if minutes_remaining_input < 0:
+    print("Deadline has already passed")
+else:
+    days = int(minutes_remaining_input / (24 * 60))
+    hours = int((minutes_remaining_input - (days * 24 * 60)) / 60)
+    minutes = int((minutes_remaining_input - ((days * 24 * 60) + (hours * 60))))
+    
+    print(f"Time remaining: {days}D {hours}H {minutes}M")
+
+
 
 # TODO: convert the input to an integer
 # TODO: calculate whole days, leftover hours, and remaining minutes

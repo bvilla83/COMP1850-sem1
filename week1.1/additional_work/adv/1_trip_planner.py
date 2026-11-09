@@ -6,9 +6,16 @@
 """
 
 destination = input("Where are you going to? ")
+try:
+    distance_miles_input = float(input("How many miles will you travel? "))
+    time_hours_input = float(input("How many hours will the journey take? "))
 
-distance_miles_input = input("How many miles will you travel? ")
-time_hours_input = input("How many hours will the journey take? ")
+    average_speed = distance_miles_input / time_hours_input
+    if average_speed <= 0: raise Exception
+
+    print(f"Average speed (mph): {average_speed:.2f}")
+except:
+    print("Invalid input")
 
 # TODO: convert distance_miles_input and time_hours_input to numbers
 # TODO: calculate the average speed in miles per hour

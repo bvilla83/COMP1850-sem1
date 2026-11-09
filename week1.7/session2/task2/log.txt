@@ -1,0 +1,2 @@
+INFO:root:calculate_average(): started
+DEBUG:root:f{total_score} divided by {total_assignments}
